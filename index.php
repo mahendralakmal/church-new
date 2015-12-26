@@ -1,45 +1,8 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Mattumagala Sacred Heart Parish</title>
-
-  <!-- CSS  -->
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-  <link href="./dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="./dist/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
+<?php require_once('./head.php'); ?>
 <body>
-  <nav class="navbar-fixed red" role="navigation">
-    <div class="nav-wrapper container-fluid">
-      <a id="logo-container" href="#" class="brand-logo"><img src='./dist/images/Mattumagala-Jubilee-logo.png' width="30" height="40"> Mattumagala Sacred Heart Parish</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Important Links</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">To Sinhala</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Important Links</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">To Sinhala</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
+  <?php require_once('./menu.php'); ?>
   <div id="index-banner" class="parallax-container">
     <div class="slider">
       <ul class="slides">
@@ -207,48 +170,6 @@
 
     </div>
   </div>
-
-  <footer class="page-footer red">
-    <!-- <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> -->
-    <div class="footer-copyright">
-      <div class="container center">
-      <p>© Mattumagala Sacred Heart Parish Meadia Committee. Design & Maintained by Mahendra Karanduwawala</p>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="./dist/js/jquery-2.1.1.min.js"></script>
-  <script src="./dist/js/materialize.js"></script>
-  <script src="./dist/js/init.js"></script>
-  <script src="./dist/js/script.js"></script>
+  <?php require_once('./footer.php'); ?>
   </body>
 </html>
