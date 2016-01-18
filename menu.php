@@ -22,6 +22,6 @@
       <li><a href="#">Contact</a></li>
       <li><a href="#">To Sinhala</a></li>
     </ul>
-    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
   </div>
 </nav>

@@ -1,10 +1,10 @@
-  @font-face {
+/*  @font-face {
   font-family: 'Material Icons';
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), 
   url(../font/material-design-icons/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
-}
+}*/
 
 .material-icons {
   font-family: 'Material Icons';
@@ -29,8 +29,12 @@
  */
 
 body {
-  background: url('./dist/images/xjesusheartill2.jpg') no-repeat center center;
-  background-attachment: fixed;
+  /*background: url('./dist/images/xjesusheartill2.jpg') no-repeat center center;*/
+  /*background-attachment: fixed;*/
+  font-family: 'Lato';
+  font-style: normal;
+
+  /*font-weight: 400;*/
 }
 
 nav ul a,
@@ -96,4 +100,49 @@ p {
 
 footer.page-footer {
   margin: 0;
+}
+
+.galary img {
+  margin-bottom: 20px;
+}
+
+.index-thumb{
+  width: 150px;
+  height: 114px;
+  position: relative;
+  overflow: hidden;
+}
+
+.index-thumb img.portrait {
+  top:50%;
+  left:50%;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.thumbnail{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 15px 15px;
+}
+
+.thumbnail img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.thumbnail img.portrait {
+  width: 100%;
+  height: auto;
 }

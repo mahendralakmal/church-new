@@ -6,9 +6,9 @@
   <div id="index-banner" class="parallax-container">
     <div class="slider">
       <ul class="slides">
-        <li><img src="./dist/images/slider/slide-1.gif" class="responsive-img"></li>
-        <li><img src="./dist/images/slider/slide-2.gif" class="responsive-img"></li>
-        <li><img src="./dist/images/slider/slide-3.gif" class="responsive-img"></li>
+        <li><img src="./dist/images/slider/slide-1.gif" class="parallax"></li>
+        <li><img src="./dist/images/slider/slide-2.gif" class="parallax"></li>
+        <li><img src="./dist/images/slider/slide-3.gif" class="parallax"></li>
       </ul>
     </div>
   </div>
@@ -89,21 +89,21 @@
         </div>
       </div>
 
-      <div class="col s12 m5">
+      <div class="col s12 m4">
         <div class="card">
           <div class="green accent-4 card-title center-align">
             The new view of the Sacred Heart Parish Mattumagala
           </div >
           <img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/ch3-1.jpg" class="col s12 m12">
           <div class="row home-img">
-              <img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/ch3.jpg" class="col s12 m4">
-              <img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/20150710_093324.jpg" class="col s12 m4">
-              <img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/ATT_22.jpg" class="col s12 m4">
+              <div class="index-thumb col s12 m4"><img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/ch3.jpg" class="portrait"></div>
+              <div class="index-thumb col s12 m4"><img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/20150710_093324.jpg" class="portrait"></div>
+              <div class="index-thumb col s12 m4"><img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/ATT_22.jpg" class="portrait"></div>
           </div>
         </div>
       </div>
 
-      <div class="col s12 m3">
+      <div class="col s12 m4">
         <div class="card">
           <img src="./dist/images/parish_priest/parish-priest.jpg" class="col s12 m12">
           <div class="card-action"><p>Parish Priest Rev. Fr. B. Anselm Shiran</p></div>

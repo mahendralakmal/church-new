@@ -40,3 +40,10 @@
   <script src="./dist/js/materialize.js"></script>
   <script src="./dist/js/init.js"></script>
   <script src="./dist/js/script.js"></script>
+  <script src="./dist/lightbox/js/lightbox.js"></script>
+  <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+  </script>
