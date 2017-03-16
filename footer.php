@@ -31,7 +31,7 @@
       <div class="container center">
       <p>© Mattumagala Sacred Heart Parish Meadia Committee. Design & Maintained by Mahendra Karanduwawala</p>
       </div>
-    </div>
+    </div>s
   </footer>
 
 
@@ -42,8 +42,12 @@
   <script src="./dist/js/script.js"></script>
   <script src="./dist/lightbox/js/lightbox.js"></script>
   <script>
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
-    })
+      $(document).ready(function () {
+          $('.carousel').carousel();
+      });
+
+        lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': true
+        });
   </script>

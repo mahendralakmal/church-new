@@ -44,13 +44,14 @@ nav .brand-logo {
 }
 
 .card .card-title { padding: 10px 5px; } 
-.card th { padding: 10px 5px; background-color: #e57373; }
+.card th { padding: 10px 5px; background-color: #efefef; }
 .card td { padding: 5px 5px; }
 
-.card img { margin-top: 10px; }
-.card .home-img img { margin-top: 10px; margin-bottom: -9px; }
+/*.card img { margin-top: 10px; }*/
+.card .home-img img { padding: 10px; }
+.card .card-hori
 
-.card audio { margin: 10px 0; }
+.card audio { margin: 60px 0; }
 
 nav .brand-logo img {
   margin-bottom: -8px;
@@ -104,45 +105,4 @@ footer.page-footer {
 
 .galary img {
   margin-bottom: 20px;
-}
-
-.index-thumb{
-  width: 150px;
-  height: 114px;
-  position: relative;
-  overflow: hidden;
-}
-
-.index-thumb img.portrait {
-  top:50%;
-  left:50%;
-  width: 100%;
-  height: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-}
-
-.thumbnail{
-  position: relative;
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  margin: 15px 15px;
-}
-
-.thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
-}
-
-.thumbnail img.portrait {
-  width: 100%;
-  height: auto;
 }

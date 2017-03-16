@@ -5,7 +5,7 @@
       <li><a href="./index.php">Home</a></li>
       <li><a href="#">History</a></li>
       <li><a href="./gallery.php">Gallery</a></li>
-      <li><a href="#">Events</a></li>
+      <li><a href="#">NEWS &amp; Events</a></li>
       <li><a href="#">Important Links</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
