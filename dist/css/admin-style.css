@@ -2,9 +2,36 @@
   margin-bottom: 0;
 }
 .admin-nav{
-  width: 300px;
+  min-width: 300px;
   margin: 10px;
 }
+
+.admin-container{
+  margin: 10px 0;
+}
+
+.admin-container form{
+  margin: 10px 0;
+}
+
+.error{
+  color: #F44336 !important;
+  margin-top: 45px;
+}
+
+.mdi-alert-success{
+  background-color: #1ebf82;
+  border: 1px solid #009c21;
+}
+.mdi-alert-error{
+  background-color: rgba(255, 0, 31, 0.34);
+  border: 1px solid #9d0018;
+}
+
+nav .brand-logo {
+  margin-left: 10px !important;
+}
+
 .collection{
   border: none !important; margin: 0;
 }
