@@ -22,10 +22,16 @@
 .mdi-alert-success{
   background-color: #1ebf82;
   border: 1px solid #009c21;
+  color: #009c21;
+  padding: 10px !important;
+  border-radius: 3px !important;
 }
 .mdi-alert-error{
   background-color: rgba(255, 0, 31, 0.34);
   border: 1px solid #9d0018;
+  color: #9d0018;
+  padding: 10px !important;
+  border-radius: 3px !important;
 }
 
 nav .brand-logo {
