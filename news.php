@@ -25,7 +25,10 @@ $post = $db->where('id', $id)->getOne('posts');
             </div>
         </div>
         <div class="col s12 m12">
-            <a href="./gallary.php">View more images</a>
+            <?php
+                $gallary = $db->where('posts_id', $id)->getOne('galaries');
+            var_dump($gallary);
+            ?>
         </div>
     </div>
 
