@@ -12,7 +12,7 @@ $post = $db->where('id', $id)->getOne('posts');
 
 
 ?>
-<div class="container">
+<div class="container news">
     <h1><?php echo $post['title'] ?></h1>
     <div class="row">
         <?php if (isset($post['featured_image'])){ ?>

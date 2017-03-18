@@ -8,16 +8,13 @@
 
 
 <!--  Scripts-->
-<script src="./dist/js/jquery-2.1.1.min.js"></script>
-<script src="./dist/js/materialize.js"></script>
-<script src="./dist/js/init.js"></script>
-<script src="./dist/js/script.js"></script>
-<script src="./dist/lightbox/js/lightbox.js"></script>
+<script src="../dist/js/jquery-2.1.1.min.js"></script>
+<script src="../dist/js/materialize.js"></script>
+<script src="../dist/js/init.js"></script>
+<script src="../dist/js/script.js"></script>
+<script src="../dist/lightbox/js/lightbox.js"></script>
 <script>
     $(document).ready(function () {
-        if ($(this).hasClass('.carousel'))
-            $('.carousel').carousel();
-
         $(window).resize(function () {
             var bodyheight = $(this).height();
             var menu = $('.navbar-fixed').height();
@@ -27,10 +24,12 @@
             console.log(bodyheight);
             console.log(menu);
             console.log(footer);
-            console.log(container);
-            container = bodyheight - (menu + footer + 50);
-            $('.news').height(container);
+//            console.log(container);
+            container = bodyheight - (menu + footer + 20);
+            $('.admin-nav').height(container);
         }).resize();
+
+//        $('.button-collapse').sideNav('show');
     });
 
 
