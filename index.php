@@ -2,8 +2,14 @@
 <html lang="en">
 <?php require_once('./head.php'); ?>
 <body>
-<?php require_once('./menu.php'); ?>
-<?php include('./slider/slider.php'); ?>
+<?php
+require_once('./menu.php');
+require_once('MysqliDb.php');
+include('./slider/slider.php');
+
+$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+?>
+
 
 <div class="section">
     <div class="row">
@@ -123,7 +129,9 @@
                 <div class="card-action"><p>Parish Priest Rev. Fr. B. Anselm Shiran</p></div>
             </div>
             <div class="card">
-                <div class="card-title blue-grey-text darken-2 center-align">Jubilly Song of Saced Heart Parish Mattumagala</div>
+                <div class="card-title blue-grey-text darken-2 center-align">Jubilly Song of Saced Heart Parish
+                    Mattumagala
+                </div>
                 <audio controls="" class="col s12 m12">
                     <source src="./dist/music/AA Sir Hade Divya Jesu.mp3" type="audio/mpeg">
                     <source src="./dist/music/AA Sir Hade Divya Jesu.mp3" type="audio/ogg">
@@ -136,49 +144,31 @@
 
             <div class="card">
                 <div class="card-content">
-                <span class="card-title blue-grey-text darken-1">News &amp; Events</span>
+                    <span class="card-title blue-grey-text darken-1">News &amp; Events</span>
+                    <?php
+                    $posts = $db->orderBy('id','Desc')->get('posts',4);
 
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img src="http://lorempixel.com/100/190/nature/6" class="col s12 m3">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information.</p>
+
+                    foreach ($posts as $post) {
+//                        echo json_encode($post['title']);
+                        ?>
+                        <div class="card horizontal row">
+                            <div class="card-image col s4 m3">
+                                <img src="./dist/images/new_view_of_church_2015/20150710_093324.jpg">
                             </div>
-                            <div class="card-action">
-                                <a href="#">This is a link</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/20150710_093324.jpg"  class="col s12 m3">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="">Read More...</a>
+                            <div class="card-stacked col s8 m9">
+                                <div class="card-title"><?php echo $post['title']?></div>
+                                <div class="card-content">
+                                    <p><?php echo strlen($post['description']) > 75 ? substr($post['description'],0,75).'...' : $post['description']?></p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="./news.php?titile=<?php echo $post['title']?>&news=<?php echo $post['id']?>">This is a link</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img alt="ch3.jpg" src="./dist/images/new_view_of_church_2015/20150710_093324.jpg"  class="col s12 m3">
-                        </div>
-                        <div class="card-stacked">
-                            <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                            </div>
-                            <div class="card-action">
-                                <a href="">Read More...</a>
-                            </div>
-                        </div>
-                    </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>

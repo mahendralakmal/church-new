@@ -28,26 +28,46 @@
       </div>
     </div> -->
     <div class="footer-copyright">
-      <div class="container center">
-      <p>© Mattumagala Sacred Heart Parish Meadia Committee. Design & Maintained by Mahendra Karanduwawala</p>
-      </div>
-    </div>s
-  </footer>
+        <div class="container center">
+            <p>© Mattumagala Sacred Heart Parish Meadia Committee. Design & Maintained by Mahendra Karanduwawala</p>
+        </div>
+    </div>
+    s
+</footer>
 
 
-  <!--  Scripts-->
-  <script src="./dist/js/jquery-2.1.1.min.js"></script>
-  <script src="./dist/js/materialize.js"></script>
-  <script src="./dist/js/init.js"></script>
-  <script src="./dist/js/script.js"></script>
-  <script src="./dist/lightbox/js/lightbox.js"></script>
-  <script>
-      $(document).ready(function () {
-          $('.carousel').carousel();
-      });
+<!--  Scripts-->
+<script src="./dist/js/jquery-2.1.1.min.js"></script>
+<script src="./dist/js/materialize.js"></script>
+<script src="./dist/js/init.js"></script>
+<script src="./dist/js/script.js"></script>
+<script src="./dist/lightbox/js/lightbox.js"></script>
+<script>
+    $(document).ready(function () {
+        if ($(this).hasClass('.carousel'))
+            $('.carousel').carousel();
 
-        lightbox.option({
-          'resizeDuration': 200,
-          'wrapAround': true
-        });
-  </script>
+        $(window).resize(function () {
+            var bodyheight = $(this).height();
+            var menu = $('.navbar-fixed').height();
+            var footer = $('.page-footer').height();
+            var container = $('.container').height();
+
+            console.log(bodyheight);
+            console.log(menu);
+            console.log(footer);
+            console.log(container);
+            container = bodyheight - (menu + footer + 50);
+            $('.container').height(container);
+//              var idheader = $(".header-front-page").height();
+//              var idheaderbb = $("#header-bottom-boxes").height();
+//              var hh = bodyheight-(idheader+idheaderbb);
+//              console.log('window height:'+ bodyheight+ ' id-header : '+ idheader+ ' header-bottom-boxes : ' + idheaderbb);
+//              console.log(hh);
+//              console.log(idheader+hh);
+//              $(".header-front-page").height(idheader+hh);
+        }).resize();
+    });
+
+
+</script>
