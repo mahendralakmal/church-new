@@ -6,6 +6,10 @@
   margin: 10px;
 }
 
+fieldset{
+  border-radius: 5px;
+}
+
 .admin-container{
   margin: 10px 0;
 }

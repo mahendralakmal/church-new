@@ -27,14 +27,12 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
     <?php require_once('./side-nav.php'); ?>
     <div class="admin-container col m9">
         <?php
-        function response($id, $db)
-        {
-            if ($id)
-                echo '<div class="mdi-alert-success col m12"> user was created. Id=' . $id . '</div>';
-            else
-                echo '<div class="mdi-alert-error col m12"> insert failed: ' . $db->getLastError() . '</div>';
-        }
-
+            function response($id,$db){
+                if ($id)
+                    echo '<div class="mdi-alert-success col m12"> user was created. Id=' . $id . '</div>';
+                else
+                    echo '<div class="mdi-alert-error col m12"> insert failed: ' . $db->getLastError() . '</div>';
+            }
         ?>
         <div class="row">
             <div class="col m7">
@@ -51,11 +49,10 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
                     <?php
                     $users = $db->get('users');
                     foreach ($users as $user) {
-                        if ($user['id'] !== 1) {
-                            echo '<tr><td>' . $user['name'] . '</td><td>' . $user['email'] . '</td><td>.';
-                            echo ($user['approved']) ? '<i class="material-icons green-text ">thumb_up</i>' : '<i class="material-icons red-text">thumb_down</i></td></tr>';
+                        if($user['id'] === 1){
+                        echo '<tr><td>' . $user['name'] . '</td><td>' . $user['email'] . '</td><td>.';
+                        echo ($user['approved'])?'<i class="material-icons green-text ">thumb_up</i>':'<i class="material-icons red-text">thumb_down</i></td></tr>';
                         }
-                    }
                     ?>
                     </tbody>
                 </table>
@@ -99,8 +96,6 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
     </div>
 </div>
 <?php require_once('./footer.php'); ?>
-<script>
 
-</script>
 </body>
 </html>

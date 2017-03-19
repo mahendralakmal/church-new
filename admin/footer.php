@@ -29,6 +29,11 @@
         }).resize();
     });
 
+    $('.login').css({
+        'position' : 'absolute',
+        'top' : '50%',
+        'margin-top' : -$('.login').outerHeight()/2
+    });
 
     $( "#registerform" ).validate({
         rules: {
