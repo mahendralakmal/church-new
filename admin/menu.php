@@ -3,8 +3,7 @@
         <a id="logo-container" href="#" class="brand-logo">Mattumagala Sacred Heart Parish</a>
         <ul class="right hide-on-med-and-down">
             <?php if (isset($login_user)) {
-                echo '
-        <li>Welcome...! ' . $login_user . ' </li>
+                echo '<li>Welcome...! ' . $login_user . '</li>
       <li><a href="logout.php">Sign Out</a></li>
       ';
             } ?>

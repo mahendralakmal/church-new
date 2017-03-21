@@ -13,6 +13,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])) {
 
     if(md5($mypassword) === $user['password']){
         $_SESSION['login_user'] = $myusername;
+        $_SESSION['login_id'] = $user['id'];
         header("location: index.php");
     }else {
         $error = "Your Login Name or Password is invalid";

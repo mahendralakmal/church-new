@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php
-require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
-include('session.php');
-require_once('./head.php'); ?>
+<?php require_once('./head.php'); ?>
 <body>
 <?php
 require_once('./menu.php');

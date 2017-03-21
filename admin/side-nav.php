@@ -5,7 +5,7 @@
             <div class="collapsible-body">
                 <ul class="collection">
                     <li class="collection-item"><a href="/admin/users.php" class="collection-item">Add New User</a></li>
-                    <li class="collection-item"><a href="/admin/locations/cities" class="collection-item">Approval</a></li>
+                    <li class="collection-item"><a href="/admin/users_approvals.php" class="collection-item">Approval</a></li>
                 </ul>
             </div>
         </li>

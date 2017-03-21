@@ -5,8 +5,6 @@
 <?php
 require_once('./menu.php');
 
-require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
 
 if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password'])) {
     $data = Array(
@@ -85,6 +83,7 @@ if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password
                                 <label for="password">Password</label>
                             </div>
                         </div>
+                        <input type="hidden" id="user_id" name="user_id" value="<?php echo $_SESSION['login_id']; ?>">
 
                         <button type="submit" class="waves-effect waves-light btn" id="submit" name="submit">Submit
                         </button>
