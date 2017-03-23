@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51196fa5-2e62-44a4-b47c-ccb01695df6a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/users_approvals.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/users_approve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/head.php" afterPath="$PROJECT_DIR$/admin/head.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/index.php" afterPath="$PROJECT_DIR$/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/login.php" afterPath="$PROJECT_DIR$/admin/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/menu.php" afterPath="$PROJECT_DIR$/admin/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/side-nav.php" afterPath="$PROJECT_DIR$/admin/side-nav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/users.php" afterPath="$PROJECT_DIR$/admin/users.php" />
-    </list>
+    <list default="true" id="51196fa5-2e62-44a4-b47c-ccb01695df6a" name="Default" comment="" />
     <ignored path="church-new.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -56,8 +46,8 @@
       <file leaf-file-name="users_approve.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/users_approve.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -178,6 +168,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="27" />
@@ -248,7 +241,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ewis" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -318,6 +311,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="51196fa5-2e62-44a4-b47c-ccb01695df6a" name="Default" comment="" />
@@ -328,12 +324,12 @@
       <workItem from="1489597866854" duration="5159000" />
       <workItem from="1489697551054" duration="5728000" />
       <workItem from="1489823740929" duration="24446000" />
-      <workItem from="1490121123859" duration="7958000" />
+      <workItem from="1490121123859" duration="8829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43291000" />
+    <option name="totallyTimeSpent" value="44162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1680" height="997" extended-state="6" />
@@ -762,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/users_approve.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="285">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
           <folding />
         </state>
       </provider>
