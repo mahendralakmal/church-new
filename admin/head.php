@@ -1,7 +1,7 @@
 <?php
-require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
-include('session.php');
+//include('session.php');
+//require_once('../MysqliDb.php');
+//$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
 ?>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>

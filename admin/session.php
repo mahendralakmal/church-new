@@ -1,7 +1,7 @@
 <?php
+//session_start();
 //require_once('../MysqliDb.php');
 //$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
-session_start();
 
 $user_check = $_SESSION['login_user'];
 
