@@ -16,7 +16,8 @@ if (isset($_POST['submit'])) {
     $uploaddir = '/images/gallery/';
     $uploadfile = $uploaddir . basename($_FILES['featured_image']['name']);
 
-    if (move_uploaded_file($_FILES['featured_image']['tmp_name'], '..'.$uploadfile)) {}
+    if (move_uploaded_file($_FILES['featured_image']['tmp_name'], '..' . $uploadfile)) {
+    }
 
 
     if (!empty($_POST['title']) && !empty($_POST['description'])) {
@@ -54,20 +55,18 @@ if (isset($_POST['submit'])) {
                 <table>
                     <thead>
                     <tr>
-                        <th data-field="id">Name</th>
-                        <th data-field="name">email</th>
-                        <th data-field="price">Approved</th>
+                        <th data-field="id">Id</th>
+                        <th data-field="name">Title</th>
+                        <th data-field="name">Approval</th>
                     </tr>
                     </thead>
 
                     <tbody>
                     <?php
-                    $users = $db->get('users');
-                    foreach ($users as $user) {
-                        if ($user['id'] != 1) {
-                            echo '<tr><td>' . $user['name'] . '</td><td>' . $user['email'] . '</td><td>.';
-                            echo ($user['approved']) ? '<i class="material-icons green-text ">thumb_up</i>' : '<i class="material-icons red-text">thumb_down</i></td></tr>';
-                        }
+                    $posts = $db->get('posts');
+                    foreach ($posts as $post) {
+                        echo '<tr><td><a href="approval_post.php?s='.$post['id'].'&d=1">' . $post['id'] . '</a></td><td><a href="approval_post.php?s='.$post['id'].'&d=1">' . $post['title'] . '</a></td><td>';
+                        echo ($post['approved']) ? '<i class="material-icons green-text ">thumb_up</i>' : '<i class="material-icons red-text">thumb_down</i></td></tr>';
                     }
                     ?>
                     </tbody>
@@ -88,8 +87,8 @@ if (isset($_POST['submit'])) {
                             <div class="col s12">
                                 <div class="input-field inline">
                                     <pre><textarea placeholder="Description" name="description"
-                                              id="description"
-                                              class="validate materialize-textarea"></textarea></pre>
+                                                   id="description"
+                                                   class="validate materialize-textarea"></textarea></pre>
                                 </div>
                             </div>
                         </div>

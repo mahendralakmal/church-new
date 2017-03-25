@@ -146,16 +146,13 @@ $db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
                 <div class="card-content">
                     <span class="card-title blue-grey-text darken-1">News &amp; Events</span>
                     <?php
-                    $posts = $db->orderBy('id', 'Desc')->get('posts', 4);
-
-
+                    $posts = $db->where('approved',1)->orderBy('id', 'Desc')->get('posts', 4);
                     foreach ($posts as $post) {
-//                        print_r($post['approved']);
                         if ($post['approved']) {
                             ?>
                             <div class="card horizontal row">
                                 <div class="card-image col s4 m3">
-                                    <img src="./dist/images/new_view_of_church_2015/20150710_093324.jpg">
+                                    <img src="<?php echo $post['featured_image'] ?>">
                                 </div>
                                 <div class="card-stacked col s8 m9">
                                     <div class="card-title"><?php echo $post['title'] ?></div>
@@ -163,8 +160,7 @@ $db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
                                         <p><?php echo strlen($post['description']) > 75 ? substr($post['description'], 0, 75) . '...' : $post['description'] ?></p>
                                     </div>
                                     <div class="card-action">
-                                        <a href="./news.php?titile=<?php echo $post['title'] ?>&news=<?php echo $post['id'] ?>">This
-                                            is a link</a>
+                                        <a href="./news.php?titile=<?php echo $post['title'] ?>&news=<?php echo $post['id'] ?>">Click to read more</a>
                                     </div>
                                 </div>
                             </div>
