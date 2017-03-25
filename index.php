@@ -146,27 +146,30 @@ $db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
                 <div class="card-content">
                     <span class="card-title blue-grey-text darken-1">News &amp; Events</span>
                     <?php
-                    $posts = $db->orderBy('id','Desc')->get('posts',4);
+                    $posts = $db->orderBy('id', 'Desc')->get('posts', 4);
 
 
                     foreach ($posts as $post) {
-//                        echo json_encode($post['title']);
-                        ?>
-                        <div class="card horizontal row">
-                            <div class="card-image col s4 m3">
-                                <img src="./dist/images/new_view_of_church_2015/20150710_093324.jpg">
-                            </div>
-                            <div class="card-stacked col s8 m9">
-                                <div class="card-title"><?php echo $post['title']?></div>
-                                <div class="card-content">
-                                    <p><?php echo strlen($post['description']) > 75 ? substr($post['description'],0,75).'...' : $post['description']?></p>
+//                        print_r($post['approved']);
+                        if ($post['approved']) {
+                            ?>
+                            <div class="card horizontal row">
+                                <div class="card-image col s4 m3">
+                                    <img src="./dist/images/new_view_of_church_2015/20150710_093324.jpg">
                                 </div>
-                                <div class="card-action">
-                                    <a href="./news.php?titile=<?php echo $post['title']?>&news=<?php echo $post['id']?>">This is a link</a>
+                                <div class="card-stacked col s8 m9">
+                                    <div class="card-title"><?php echo $post['title'] ?></div>
+                                    <div class="card-content">
+                                        <p><?php echo strlen($post['description']) > 75 ? substr($post['description'], 0, 75) . '...' : $post['description'] ?></p>
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="./news.php?titile=<?php echo $post['title'] ?>&news=<?php echo $post['id'] ?>">This
+                                            is a link</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <?php
+                            <?php
+                        }
                     }
                     ?>
                 </div>
@@ -194,8 +197,10 @@ $db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
                 <h3><i class="mdi-content-send red-text"></i></h3>
                 <h4>A Glimpse into the History of Mattumagala Parish.</h4>
                 <p class="left-align light">The records of the Mattumagala Church indicate the commencement of its
-                    history dating back to more than 100 years.It was intended to build The Sacred Heart Church on an
-                    acerage of land situated along the Colombo-Negombo Road, known as Kahatagahawatte or Thalgawatte.
+                    history dating back to more than 100 years.It was intended to build The Sacred Heart Church on
+                    an
+                    acerage of land situated along the Colombo-Negombo Road, known as Kahatagahawatte or
+                    Thalgawatte.
                     This land was situated in the Western Province,&nbsp;<a href="">read more...</a></p>
             </div>
         </div>
@@ -222,7 +227,8 @@ $db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
             <div class="col s12 center">
                 <h3><i class="mdi-content-send red-text"></i></h3>
                 <h4>Establishment of Mattumagala Parish.</h4>
-                <p class="left-align light">The Parish Priest of Nagoda in the early 1960s was Rev. Fr. Fabian (O.M.I.),
+                <p class="left-align light">The Parish Priest of Nagoda in the early 1960s was Rev. Fr. Fabian
+                    (O.M.I.),
                     who was very keen to establish a separate parish for the Catholics of Mattumagala and devolve
                     authority and responsibility entirely to the resident Parish Priest of that Parish. Fr. Fabian
                     worked zealously towards achieving his desire, and&nbsp;<a href="">read more...</a></p>
