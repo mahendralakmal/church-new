@@ -16,10 +16,11 @@ $post = $db->where('id', $id)->getOne('posts');
     <h1><?php echo $post['title'] ?></h1>
     <div class="row">
         <?php if (isset($post['featured_image'])){ ?>
-        <div class="col s12 m5"><img src="" alt="<?php echo $post['featured_image'] ?>"></div>
-        <div class="col s12 m7">
+        <div class="col s12 m4">
+            <img src="<?php echo $post['featured_image'] ?>" alt="<?php echo $post['featured_image'] ?>" class="responsive-img" style="max-height: 450px"></div>
+        <div class="col s12 m8">
             <?php } else { ?>
-            <div class="col s12 m12">
+            <div class="col s12 m12 mdi-editor-format-align-justify">
                 <?php }
                 echo $post['description'] ?>
             </div>

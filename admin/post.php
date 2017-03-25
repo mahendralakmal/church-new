@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 
         $data = Array(
             'title' => $_POST['title'],
-            'description' => $_POST['description'],
+            'description' => nl2br($_POST['description']),
             'featured' => ($_POST['featured'] == 'on') ? true : false,
             'featured_image' => $uploadfile,
             'created_at' => $db->now(),
@@ -87,9 +87,9 @@ if (isset($_POST['submit'])) {
                         <div class="row">
                             <div class="col s12">
                                 <div class="input-field inline">
-                                    <textarea placeholder="Description" aria-multiline="true" name="description"
+                                    <pre><textarea placeholder="Description" name="description"
                                               id="description"
-                                              class="validate materialize-textarea"></textarea>
+                                              class="validate materialize-textarea"></textarea></pre>
                                 </div>
                             </div>
                         </div>
