@@ -1,8 +1,9 @@
 <?php
-
+if (!isset($_SESSION)) {
+    session_start();
+}
 require_once('../MysqliDb.php');
 $db = new MysqliDb ();
-session_start();
 include('session.php');
 if (!empty($_GET['s'])) {
     $data = Array(
@@ -12,10 +13,7 @@ if (!empty($_GET['s'])) {
     );
 
     $id = $db->where('id', $_GET['s']);
-    if ($id->update('users', $data))
-        echo $id->count . ' records were updated';
-    else
-        echo 'update failed: ' . $id->getLastError();
+    echo ($id->update('users', $data))?'':'update failed: ' . $id->getLastError();
 
     header("location: /admin/users_approvals.php");
 }

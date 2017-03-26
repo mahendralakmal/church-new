@@ -1,7 +1,4 @@
 <?php
-//session_start();
-//require_once('../MysqliDb.php');
-//$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
 
 $user_check = $_SESSION['login_user'];
 
@@ -11,6 +8,11 @@ $login_session = $user['email'];
 $login_user = $user['name'];
 
 if(!isset($_SESSION['login_user'])){
-    header("location:login.php");
+    if (headers_sent()){
+        echo("<script>location.href = 'login.php';</script>");
+    }else{
+//        print_r('JJJJ'); exit();
+        header("location:login.php");
+    }
 }
 ?>

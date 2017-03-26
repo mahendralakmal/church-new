@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
 require_once('../MysqliDb.php');
 $db = new MysqliDb ();
-session_start();
 include('session.php');
 require_once('./head.php');
 ?>

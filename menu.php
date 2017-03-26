@@ -4,7 +4,7 @@
     <ul class="right hide-on-med-and-down">
       <li><a href="./index.php">Home</a></li>
       <li><a href="./history.php">History</a></li>
-      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./gallery.php">Gallery</a></li>
       <li><a href="./news.php">NEWS &amp; Events</a></li>
       <li><a href="./important_links.php">Important Links</a></li>
       <li><a href="./about_us.php">About</a></li>
@@ -15,7 +15,7 @@
     <ul id="nav-mobile" class="side-nav">
       <li><a href="./index.php">Home</a></li>
       <li><a href="./history.php">History</a></li>
-      <li><a href="./gallery.html">Gallery</a></li>
+      <li><a href="./gallery.php">Gallery</a></li>
       <li><a href="./news.php">NEWS &amp; Events</a></li>
       <li><a href="./important_links.php">Important Links</a></li>
       <li><a href="./about_us.php">About</a></li>

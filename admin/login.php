@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+if(!isset($_SESSION)){
+    session_start();
+}
 require_once('../MysqliDb.php');
 $db = new MysqliDb ();
-session_start();
 $error = '';
 if(!empty($_POST['email']) && !empty($_POST['password'])) {
     $myusername = $_POST['email'];
@@ -14,7 +16,11 @@ if(!empty($_POST['email']) && !empty($_POST['password'])) {
     if(md5($mypassword) === $user['password']){
         $_SESSION['login_user'] = $myusername;
         $_SESSION['login_id'] = $user['id'];
-        header("location: index.php");
+        if (headers_sent()){
+            echo("<script>location.href = 'index.php';</script>");
+        }else{
+            header("location:index.php");
+        }
     }else {
         $error = "Your Login Name or Password is invalid";
     }
