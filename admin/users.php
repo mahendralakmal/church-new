@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+$db = new MysqliDb ();
 session_start();
 include('session.php');
 require_once('./head.php');

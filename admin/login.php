@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+$db = new MysqliDb ();
 session_start();
 $error = '';
 if(!empty($_POST['email']) && !empty($_POST['password'])) {

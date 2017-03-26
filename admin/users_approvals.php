@@ -6,7 +6,7 @@
 require_once('./menu.php');
 
 require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+$db = new MysqliDb ();
 
 if (!empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['password'])) {
     $data = Array(

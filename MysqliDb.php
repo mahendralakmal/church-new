@@ -135,12 +135,12 @@ class MysqliDb
      * Database credentials
      * @var string
      */
-    protected $host;
-    protected $_username;
-    protected $_password;
-    protected $db;
-    protected $port;
-    protected $charset;
+    protected $host = 'localhost';
+    protected $_username = 'homestead';
+    protected $_password = 'secret';
+    protected $db = 'fsnhs';
+    protected $port = null;
+    protected $charset = 'utf8';
 
     /**
      * Is Subquery object
@@ -227,28 +227,29 @@ class MysqliDb
      * @param int $port
      * @param string $charset
      */
-    public function __construct($host = null, $username = null, $password = null, $db = null, $port = null, $charset = 'utf8')
+    //public function __construct($host = null, $username = null, $password = null, $db = null, $port = null, $charset = 'utf8')
+    public function __construct()
     {
         $isSubQuery = false;
 
         // if params were passed as array
-        if (is_array($host)) {
-            foreach ($host as $key => $val) {
+        if (is_array($this->host)) {
+            foreach ($this->host as $key => $val) {
                 $$key = $val;
             }
         }
         // if host were set as mysqli socket
-        if (is_object($host)) {
-            $this->_mysqli = $host;
+        if (is_object($this->host)) {
+            $this->_mysqli = $this->host;
         } else {
-            $this->host = $host;
+            $this->host = $this->host;
         }
 
-        $this->_username = $username;
-        $this->_password = $password;
-        $this->db = $db;
-        $this->port = $port;
-        $this->charset = $charset;
+//        $this->_username = $this->_username;
+//        $this->_password = $this->_password;
+//        $this->db = $this->db;
+//        $this->port = $this->port;
+//        $this->charset = $this->charset;
 
         if ($isSubQuery) {
             $this->isSubQuery = true;

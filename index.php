@@ -7,7 +7,7 @@ require_once('./menu.php');
 require_once('MysqliDb.php');
 include('./slider/slider.php');
 
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+$db = new MysqliDb ();
 ?>
 
 

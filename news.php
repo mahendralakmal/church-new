@@ -5,7 +5,7 @@
 <?php
 require_once('./menu.php');
 require_once('MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+$db = new MysqliDb ();
 
 $id = intval($_GET['news']);
 $post = $db->where('id', $id)->getOne('posts');

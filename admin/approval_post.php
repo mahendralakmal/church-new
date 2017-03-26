@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 require_once('../MysqliDb.php');
-$db = new MysqliDb ('localhost', 'homestead', 'secret', 'fsnhs');
+$db = new MysqliDb ();
 session_start();
 include('session.php');
 require_once('./head.php');
@@ -13,30 +13,7 @@ require_once('./menu.php');
 
 $id = intval($_GET['s']);
 $post = $db->where('id', $id)->getOne('posts');
-//if (isset($_POST['submit'])) {
-//    $uploaddir = '/images/gallery/';
-//    $uploadfile = $uploaddir . basename($_FILES['featured_image']['name']);
-//
-//    if (move_uploaded_file($_FILES['featured_image']['tmp_name'], '..' . $uploadfile)) {
-//    }
-//
-//
-//    if (!empty($_POST['title']) && !empty($_POST['description'])) {
-//
-//        $data = Array(
-//            'title' => $_POST['title'],
-//            'description' => nl2br($_POST['description']),
-//            'featured' => ($_POST['featured'] == 'on') ? true : false,
-//            'featured_image' => $uploadfile,
-//            'created_at' => $db->now(),
-//            'created_by' => $_SESSION['login_id']
-//        );
-//
-//        $id = $db->insert('posts', $data);
-//        response($id, $db);
-//
-//    }
-//}
+
 ?>
 <div class="row admin">
     <?php require_once('./side-nav.php'); ?>
