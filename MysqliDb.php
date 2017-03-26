@@ -136,9 +136,9 @@ class MysqliDb
      * @var string
      */
     protected $host = 'localhost';
-    protected $_username = 'homestead';
-    protected $_password = 'secret';
-    protected $db = 'fsnhs';
+    protected $_username = 'homestead'; //sacredhe_nlAd237
+    protected $_password = 'secret'; //2y$$H347
+    protected $db = 'fsnhs'; //sacredhe_nl237
     protected $port = null;
     protected $charset = 'utf8';
 
