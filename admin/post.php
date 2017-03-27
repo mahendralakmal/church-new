@@ -13,7 +13,7 @@ require_once('./head.php');
 <?php
 require_once('./menu.php');
 
-//print_r(json_encode($_POST));
+print_r(json_encode($_POST)); exit();
 if (isset($_POST['submit'])) {
     $uploaddir = '/images/gallery/';
     $uploadfile = $uploaddir . basename($_FILES['featured_image']['name']);
@@ -114,24 +114,24 @@ if (isset($_POST['submit'])) {
                             </div>
                         </div>
 
-                        <div class="input_fields_wrap row">
+                        <div class="row">
                             <div class="file-field input-field col s12">
                                 <div class="btn">
                                     <span>File</span>
-                                    <input type="file" name="featured_image[]"
-                                           id="featured_image">
+                                    <input type="file" name="galary_images[]" multiple>
                                 </div>
                                 <div class="file-path-wrapper">
-                                    <input placeholder="Featured Image (allows only .jpg, .png and .gif)"
-                                           class="file-path validate" type="text">
+                                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col s11"><a class="add_more" href="#"><i class="material-icons"
-                                                                                 style="margin-top: 28px; color: #26a69a;">add</i>
-                                    Add more images</a></div>
-                        </div>
+                        <div class="input_fields_wrap row"></div>
+
+<!--                        <div class="row">-->
+<!--                            <div class=""><a class="add_more" href="#"><i class="material-icons"-->
+<!--                                                                                 style="margin-top: 28px; color: #26a69a;">add</i>-->
+<!--                                    Add more images</a></div>-->
+<!--                        </div>-->
                         <div class="row">
                             <div class="col s12">
                                 <input type="hidden" id="user_id" name="user_id"
@@ -150,38 +150,23 @@ if (isset($_POST['submit'])) {
 </div>
 <?php require_once('./footer.php'); ?>
 <script type="application/javascript">
-    $(document).ready(function() {
-        var max_fields      = 10; //maximum input boxes allowed
-        var wrapper         = $(".input_fields_wrap"); //Fields wrapper
-        var add_button      = $(".add_field_button"); //Add button ID
-
-        var x = 1; //initlal text box count
-        $(".add_more").click(function(e){ //on add input button click
-            e.preventDefault();
-            if(x < max_fields){ //max input box allowed
-                x++; //text box increment
-                $(wrapper).append('<div class="file-field input-field col s12"><div class="btn"><span>File</span><input type="file" name="featured_image[]" id="featured_image"></div><div class="file-path-wrapper"><input placeholder="Featured Image (allows only .jpg, .png and .gif)" class="file-path validate" type="text"></div></div><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            }
-        });
-
-        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
-            e.preventDefault(); $(this).parent('div').remove(); x--;
-        })
-    });
-//    $('document').ready(function () {
-//        $('.add_more').click(function () {
-//            addControl += ' <div class="row"><div class="file-field input-field col s12"><div class="btn"><span>File</span><input type="file" name="galary[]" id="featured_image"></div><div class="file-path-wrapper"><input placeholder="Other Images (allows only .jpg, .png and .gif)" class="file-path validate" type="text"></div></div></div> ';
-//            alert(addControl);
-//            $('.display').before(addControl);
+//    $(document).ready(function() {
+//        var max_fields      = 10; //maximum input boxes allowed
+//        var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+//        var add_button      = $(".add_more"); //Add button ID
+//
+//        var x = 1; //initlal text box count
+//        $(add_button).click(function(e){ //on add input button click
+//            e.preventDefault();
+////            if(x < max_fields){ //max input box allowed
+//                x++; //text box increment
+//                $(wrapper).append('<div><div class="file-field input-field col s11"><div class="btn"><span>File</span><input type="file" name="featured_image[]" id="featured_image"></div><div class="file-path-wrapper"><input placeholder="Images for gallary (allows only .jpg, .png and .gif)" class="file-path validate" type="text"></div></div><a href="#" class="remove_field col s1"><i class="material-icons">delete</i></a></div></div>'); //add input box
+////            }
 //        });
-//    });
-
-//    $(function(){
-//        $('.add_more').click(function(){
-//            var addControl = '<label>Upload Text File:</label>';
-//            addControl += ' <div class="row"><div class="file-field input-field col s12"><div class="btn"><span>File</span><input type="file" name="galary[]" id="featured_image"></div><div class="file-path-wrapper"><input placeholder="Other Images (allows only .jpg, .png and .gif)" class="file-path validate" type="text"></div></div></div> ';
-//            $('#display').before(addControl);
-//        });
+//
+//        $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+//            e.preventDefault(); $(this).parent('div').remove(); x--;
+//        })
 //    });
 
 </script>
