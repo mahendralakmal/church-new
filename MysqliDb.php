@@ -1378,7 +1378,7 @@ class MysqliDb
             if ($status && $haveOnDuplicate) {
                 return true;
             }
-            return false;
+            return $this->_stmtError;
         }
 
         if ($stmt->insert_id > 0) {
