@@ -48,13 +48,19 @@ $post = $db->where('id', $id)->getOne('posts');
                 </div>
                 <div class="col s12 m12">
                     <p>Approval : <?php
-                        echo ($post['approved']) ? '<a href="approve_post.php?s='.$post['id'].'&d=1"><i class="material-icons green-text ">thumb_up</i></a>' : '<a href="approve_post.php?s='.$post['id'].'&d=0"><i class="material-icons red-text">thumb_down</i></a>';
+                        echo ($post['approved']) ? '<a href="approve_post.php?s=' . $post['id'] . '&d=1"><i class="material-icons green-text ">thumb_up</i></a>' : '<a href="approve_post.php?s=' . $post['id'] . '&d=0"><i class="material-icons red-text">thumb_down</i></a>';
                         ?></p>
                 </div>
                 <div class="col s12 m12">
                     <?php
-                    $gallary = $db->where('posts_id', $id)->getOne('galaries');
-                    //                    var_dump($gallary);
+                    $gallery = $db->where('posts_id', $id)->get('galleries');
+                    foreach ($gallery as $value)
+                    {
+                        ?>
+                        <img src="<?php echo($value['images'])?>" alt="<?php echo($value['images'])?>">
+                        <?php
+//                        var_dump($value['images']);
+                    }
                     ?>
                 </div>
             </div>

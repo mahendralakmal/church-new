@@ -27,7 +27,7 @@ $post = $db->where('id', $id)->getOne('posts');
         </div>
         <div class="col s12 m12">
             <?php
-                $gallary = $db->where('posts_id', $id)->getOne('galaries');
+                $gallary = $db->where('posts_id', $id)->getOne('galleries');
 //            var_dump($gallary);
             ?>
         </div>

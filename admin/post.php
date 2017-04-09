@@ -17,52 +17,32 @@ require_once('./menu.php');
 if (isset($_POST['submit'])) {
     $uploaddir = '/images/gallery/';
     $uploadfile = $uploaddir . basename($_FILES['featured_image']['name']);
-
     if (move_uploaded_file($_FILES['featured_image']['tmp_name'], '..' . $uploadfile)) {
-    }
-
-
-    if (!empty($_POST['title']) && !empty($_POST['description'])) {
-
-        $data = Array(
-            'title' => $_POST['title'],
-            'description' => nl2br($_POST['description']),
-            'featured' => ($_POST['featured'] == 'on') ? true : false,
-            'featured_image' => $uploadfile,
-            'created_at' => $db->now(),
-            'created_by' => $_SESSION['login_id']
-        );
-
-//        var_dump($data);
-        $id = $db->insert('posts', $data);
-//        var_dump($id);
-        foreach ($_FILES['galary_images']['name'] as $key => $value) {
-
-            $tmp_name = $id .'-'. $_FILES["galary_images"]["tmp_name"][$key];
-            $name = $uploaddir . basename($id .'-'. $_FILES["galary_images"]["name"][$key]);
-
-            move_uploaded_file($tmp_name, '..' . $name);
-
-            $img = Array(
-                'posts_id' => $id,
-                'images' => $name,
+        if (!empty($_POST['title']) && !empty($_POST['description'])) {
+            $data = Array(
+                'title' => $_POST['title'],
+                'description' => nl2br($_POST['description']),
+                'featured' => ($_POST['featured'] == 'on') ? true : false,
+                'featured_image' => $uploadfile,
                 'created_at' => $db->now(),
                 'created_by' => $_SESSION['login_id']
             );
-
-//            var_dump($img);
-
-            $c = $db->insert('galleries', $img);
-//            var_dump($c);
-//            exit();
+            $id = $db->insert('posts', $data);
+            foreach ($_FILES['galary_images']['name'] as $key => $value) {
+                $name = $uploaddir . basename($id . '_' . $key . '_' . $_FILES["galary_images"]["name"][$key]);
+                if (move_uploaded_file($_FILES["galary_images"]["tmp_name"][$key], '..' . $name)) {
+                    $img = Array(
+                        'posts_id' => $id,
+                        'images' => $name,
+                        'created_at' => $db->now(),
+                        'created_by' => $_SESSION['login_id']
+                    );
+                    $c = $db->insert('galleries', $img);
+                } else response(false, $db);
+            }
+            response($id, $db);
         }
-
-
-        response($id, $db);
-
-    }
-
-
+    } else response($id, $db);
 }
 ?>
 <div class="row admin">
