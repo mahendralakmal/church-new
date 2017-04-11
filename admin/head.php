@@ -13,5 +13,6 @@
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
   <link href="../dist/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../dist/css/admin-style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../dist/css/css.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="../dist/lightbox/css/lightbox.css" rel="stylesheet">
 </head>
